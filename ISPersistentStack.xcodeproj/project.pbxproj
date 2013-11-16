@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7FC178E71837AE0800764203 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC178E61837AE0800764203 /* Foundation.framework */; };
+		7FC178EC1837AE0800764203 /* ISPersistentStack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FC178EB1837AE0800764203 /* ISPersistentStack.h */; };
+		7FC178EE1837AE0800764203 /* ISPersistentStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC178ED1837AE0800764203 /* ISPersistentStack.m */; };
+		7FC178F51837AE0800764203 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC178F41837AE0800764203 /* XCTest.framework */; };
+		7FC178F61837AE0800764203 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC178E61837AE0800764203 /* Foundation.framework */; };
+		7FC178F81837AE0800764203 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC178F71837AE0800764203 /* UIKit.framework */; };
+		7FC178FB1837AE0800764203 /* libISPersistentStack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC178E31837AE0800764203 /* libISPersistentStack.a */; };
+		7FC179011837AE0800764203 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FC178FF1837AE0800764203 /* InfoPlist.strings */; };
+		7FC179031837AE0800764203 /* ISPersistentStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC179021837AE0800764203 /* ISPersistentStackTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7FC178F91837AE0800764203 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7FC178DB1837AE0800764203 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FC178E21837AE0800764203;
+			remoteInfo = ISPersistentStack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7FC178E11837AE0800764203 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				7FC178EC1837AE0800764203 /* ISPersistentStack.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7FC178E31837AE0800764203 /* libISPersistentStack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libISPersistentStack.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FC178E61837AE0800764203 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7FC178EA1837AE0800764203 /* ISPersistentStack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ISPersistentStack-Prefix.pch"; sourceTree = "<group>"; };
+		7FC178EB1837AE0800764203 /* ISPersistentStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISPersistentStack.h; sourceTree = "<group>"; };
+		7FC178ED1837AE0800764203 /* ISPersistentStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISPersistentStack.m; sourceTree = "<group>"; };
+		7FC178F31837AE0800764203 /* ISPersistentStackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISPersistentStackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FC178F41837AE0800764203 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7FC178F71837AE0800764203 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7FC178FE1837AE0800764203 /* ISPersistentStackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ISPersistentStackTests-Info.plist"; sourceTree = "<group>"; };
+		7FC179001837AE0800764203 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7FC179021837AE0800764203 /* ISPersistentStackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISPersistentStackTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7FC178E01837AE0800764203 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC178E71837AE0800764203 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FC178F01837AE0800764203 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC178F51837AE0800764203 /* XCTest.framework in Frameworks */,
+				7FC178F81837AE0800764203 /* UIKit.framework in Frameworks */,
+				7FC178F61837AE0800764203 /* Foundation.framework in Frameworks */,
+				7FC178FB1837AE0800764203 /* libISPersistentStack.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7FC178DA1837AE0800764203 = {
+			isa = PBXGroup;
+			children = (
+				7FC178E81837AE0800764203 /* ISPersistentStack */,
+				7FC178FC1837AE0800764203 /* ISPersistentStackTests */,
+				7FC178E51837AE0800764203 /* Frameworks */,
+				7FC178E41837AE0800764203 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7FC178E41837AE0800764203 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7FC178E31837AE0800764203 /* libISPersistentStack.a */,
+				7FC178F31837AE0800764203 /* ISPersistentStackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7FC178E51837AE0800764203 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FC178E61837AE0800764203 /* Foundation.framework */,
+				7FC178F41837AE0800764203 /* XCTest.framework */,
+				7FC178F71837AE0800764203 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FC178E81837AE0800764203 /* ISPersistentStack */ = {
+			isa = PBXGroup;
+			children = (
+				7FC178EB1837AE0800764203 /* ISPersistentStack.h */,
+				7FC178ED1837AE0800764203 /* ISPersistentStack.m */,
+				7FC178E91837AE0800764203 /* Supporting Files */,
+			);
+			path = ISPersistentStack;
+			sourceTree = "<group>";
+		};
+		7FC178E91837AE0800764203 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7FC178EA1837AE0800764203 /* ISPersistentStack-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7FC178FC1837AE0800764203 /* ISPersistentStackTests */ = {
+			isa = PBXGroup;
+			children = (
+				7FC179021837AE0800764203 /* ISPersistentStackTests.m */,
+				7FC178FD1837AE0800764203 /* Supporting Files */,
+			);
+			path = ISPersistentStackTests;
+			sourceTree = "<group>";
+		};
+		7FC178FD1837AE0800764203 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7FC178FE1837AE0800764203 /* ISPersistentStackTests-Info.plist */,
+				7FC178FF1837AE0800764203 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7FC178E21837AE0800764203 /* ISPersistentStack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FC179061837AE0800764203 /* Build configuration list for PBXNativeTarget "ISPersistentStack" */;
+			buildPhases = (
+				7FC178DF1837AE0800764203 /* Sources */,
+				7FC178E01837AE0800764203 /* Frameworks */,
+				7FC178E11837AE0800764203 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ISPersistentStack;
+			productName = ISPersistentStack;
+			productReference = 7FC178E31837AE0800764203 /* libISPersistentStack.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7FC178F21837AE0800764203 /* ISPersistentStackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FC179091837AE0800764203 /* Build configuration list for PBXNativeTarget "ISPersistentStackTests" */;
+			buildPhases = (
+				7FC178EF1837AE0800764203 /* Sources */,
+				7FC178F01837AE0800764203 /* Frameworks */,
+				7FC178F11837AE0800764203 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FC178FA1837AE0800764203 /* PBXTargetDependency */,
+			);
+			name = ISPersistentStackTests;
+			productName = ISPersistentStackTests;
+			productReference = 7FC178F31837AE0800764203 /* ISPersistentStackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7FC178DB1837AE0800764203 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Yosuke Ishikawa";
+			};
+			buildConfigurationList = 7FC178DE1837AE0800764203 /* Build configuration list for PBXProject "ISPersistentStack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7FC178DA1837AE0800764203;
+			productRefGroup = 7FC178E41837AE0800764203 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7FC178E21837AE0800764203 /* ISPersistentStack */,
+				7FC178F21837AE0800764203 /* ISPersistentStackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7FC178F11837AE0800764203 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC179011837AE0800764203 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7FC178DF1837AE0800764203 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC178EE1837AE0800764203 /* ISPersistentStack.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FC178EF1837AE0800764203 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC179031837AE0800764203 /* ISPersistentStackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7FC178FA1837AE0800764203 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7FC178E21837AE0800764203 /* ISPersistentStack */;
+			targetProxy = 7FC178F91837AE0800764203 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7FC178FF1837AE0800764203 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FC179001837AE0800764203 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7FC179041837AE0800764203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7FC179051837AE0800764203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7FC179071837AE0800764203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ISPersistentStack.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ISPersistentStack/ISPersistentStack-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7FC179081837AE0800764203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ISPersistentStack.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ISPersistentStack/ISPersistentStack-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7FC1790A1837AE0800764203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ISPersistentStack/ISPersistentStack-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ISPersistentStackTests/ISPersistentStackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7FC1790B1837AE0800764203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ISPersistentStack/ISPersistentStack-Prefix.pch";
+				INFOPLIST_FILE = "ISPersistentStackTests/ISPersistentStackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FC178DE1837AE0800764203 /* Build configuration list for PBXProject "ISPersistentStack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FC179041837AE0800764203 /* Debug */,
+				7FC179051837AE0800764203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FC179061837AE0800764203 /* Build configuration list for PBXNativeTarget "ISPersistentStack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FC179071837AE0800764203 /* Debug */,
+				7FC179081837AE0800764203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7FC179091837AE0800764203 /* Build configuration list for PBXNativeTarget "ISPersistentStackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FC1790A1837AE0800764203 /* Debug */,
+				7FC1790B1837AE0800764203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7FC178DB1837AE0800764203 /* Project object */;
+}
