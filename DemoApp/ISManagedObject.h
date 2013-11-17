@@ -6,4 +6,6 @@
 @property (nonatomic, retain) NSNumber *identifier;
 @property (nonatomic, retain) NSString *name;
 
++ (NSString *)entityName;
+
 @end

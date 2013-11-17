@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F11C9B918390DFF00FA907D /* ISDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F11C9B818390DFF00FA907D /* ISDemoViewController.m */; };
+		7F11C9BB18390E4800FA907D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F11C9BA18390E4800FA907D /* Main.storyboard */; };
 		7FA9D0871837B06900815750 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA9D0861837B06900815750 /* CoreData.framework */; };
 		7FA9D0A51837B5A700815750 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC178E61837AE0800764203 /* Foundation.framework */; };
 		7FA9D0A71837B5A700815750 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA9D0A61837B5A700815750 /* CoreGraphics.framework */; };
@@ -68,6 +70,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F11C9B718390DFF00FA907D /* ISDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISDemoViewController.h; sourceTree = "<group>"; };
+		7F11C9B818390DFF00FA907D /* ISDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISDemoViewController.m; sourceTree = "<group>"; };
+		7F11C9BA18390E4800FA907D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7F6BFDBACF514F588FD16D89 /* Pods-UnitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.xcconfig"; path = "Pods/Pods-UnitTests.xcconfig"; sourceTree = "<group>"; };
 		7FA9D0861837B06900815750 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7FA9D08E1837B0D400815750 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -138,8 +143,11 @@
 			isa = PBXGroup;
 			children = (
 				7FA9D0EA1837B72500815750 /* Model.xcdatamodeld */,
+				7F11C9BA18390E4800FA907D /* Main.storyboard */,
 				7FA9D0B21837B5A700815750 /* ISAppDelegate.h */,
 				7FA9D0B31837B5A700815750 /* ISAppDelegate.m */,
+				7F11C9B718390DFF00FA907D /* ISDemoViewController.h */,
+				7F11C9B818390DFF00FA907D /* ISDemoViewController.m */,
 				7FA9D0ED1837B76B00815750 /* ISManagedObject.h */,
 				7FA9D0EE1837B76B00815750 /* ISManagedObject.m */,
 				7FA9D0B51837B5A700815750 /* Images.xcassets */,
@@ -329,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F11C9BB18390E4800FA907D /* Main.storyboard in Resources */,
 				7FA9D0AE1837B5A700815750 /* InfoPlist.strings in Resources */,
 				7FA9D0B61837B5A700815750 /* Images.xcassets in Resources */,
 			);
@@ -382,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F11C9B918390DFF00FA907D /* ISDemoViewController.m in Sources */,
 				7FA9D0EF1837B76B00815750 /* ISManagedObject.m in Sources */,
 				7FA9D0B41837B5A700815750 /* ISAppDelegate.m in Sources */,
 				7FA9D0B01837B5A700815750 /* main.m in Sources */,
