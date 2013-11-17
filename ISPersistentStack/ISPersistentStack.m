@@ -2,6 +2,8 @@
 
 @implementation ISPersistentStack
 
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize managedObjectContext = _managedObjectContext;
 
 + (instancetype)sharedStack
@@ -46,21 +48,33 @@
     return [model isConfiguration:nil compatibleWithStoreMetadata:metaData];
 }
 
-- (NSManagedObjectContext *)managedObjectContext
+- (NSManagedObjectModel *)managedObjectModel
 {
-    if (!_managedObjectContext) {
-        NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:self.modelURL];
-        NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
+    if (!_managedObjectModel) {
+        _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:self.modelURL];
+    }
+    return _managedObjectModel;
+}
+
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
+{
+    if (!_persistentStoreCoordinator) {
+        _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
         NSError *error = nil;
-        if (![coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.storeURL options:nil error:&error]) {
+        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.storeURL options:nil error:&error]) {
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
-        
-        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-        _managedObjectContext.persistentStoreCoordinator = coordinator;
     }
-    
+    return _persistentStoreCoordinator;
+}
+
+- (NSManagedObjectContext *)managedObjectContext
+{
+    if (!_managedObjectContext) {
+        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+        _managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
+    }
     return _managedObjectContext;
 }
 
