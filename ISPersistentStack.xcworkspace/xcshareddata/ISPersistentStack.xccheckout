@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D25A3736-82E8-4345-9F11-A7E2C1A46DB7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ISPersistentStack</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>51F62F1E-ABC6-4A48-98D3-AED35CBF5CCB</key>
+		<string>ssh://github.com/ishkawa/ISPersistentStack.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ISPersistentStack.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>51F62F1E-ABC6-4A48-98D3-AED35CBF5CCB</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/ishkawa/ISPersistentStack.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>51F62F1E-ABC6-4A48-98D3-AED35CBF5CCB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>51F62F1E-ABC6-4A48-98D3-AED35CBF5CCB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ISPersistentStack</string>
+		</dict>
+	</array>
+</dict>
+</plist>
