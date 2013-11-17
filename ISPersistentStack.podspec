@@ -8,6 +8,11 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '5.0'
   s.requires_arc = true
   s.framework    = 'CoreData'
+  s.prefix_header_contents = <<-EOS
+    #ifdef __OBJC__
+    #import <CoreData/CoreData.h>
+    #endif /* __OBJC__*/
+  EOS
   s.source_files = 'ISPersistentStack/**/*.{h,m}'
   s.license      = {
     :type => 'MIT',
