@@ -32,27 +32,28 @@
     STAssertNotNil(persistentStack.managedObjectContext.persistentStoreCoordinator.managedObjectModel, @"model should exist.");
 }
 
-- (void)testIsRequiredMigration
+- (void)testIsCompatible
 {
     id mock = [OCMockObject mockForClass:[NSPersistentStoreCoordinator class]];
     [[[mock stub] andReturn:@{@"key": @"value"}] metadataForPersistentStoreOfType:NSSQLiteStoreType
-                                                                              URL:[ISPersistentStack sqliteStoreURL]
+                                                                              URL:[ISPersistentStack storeURL]
                                                                             error:[OCMArg setTo:nil]];
     
-    STAssertTrue(persistentStack.shouldDropDatabase, @"doctor should drop database if model is not comaptible with current store");
+    STAssertTrue(persistentStack.isCompatibleWithCurrentStore,
+                 @"stack should be incompatible with current store if meta data is invalid.");
 }
 
 - (void)testDropDatabase
 {
     NSManagedObjectContext *previousContext = persistentStack.managedObjectContext;
-    NSURL *storeURL = [ISPersistentStack sqliteStoreURL];
+    NSURL *storeURL = [ISPersistentStack storeURL];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     id mock = [OCMockObject partialMockForObject:fileManager];
     [[[mock stub] andReturnValue:@YES] fileExistsAtPath:storeURL.path];
     [[[mock expect] andReturnValue:@YES] removeItemAtURL:storeURL error:[OCMArg setTo:nil]];
     
-    [persistentStack dropDatabase];
+    [persistentStack deleteCurrentStore];
     
     STAssertNoThrow([mock verify], @"item store URL was not removed.");
     STAssertTrue(persistentStack.managedObjectContext != previousContext, @"did not recreate context.");

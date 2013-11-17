@@ -20,7 +20,7 @@
     return [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
 }
 
-+ (NSURL *)sqliteStoreURL
++ (NSURL *)storeURL
 {
     NSArray *URLs = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
     NSURL *documentURL = [URLs lastObject];
@@ -29,11 +29,11 @@
 
 #pragma mark - accessors
 
-- (BOOL)shouldDropDatabase
+- (BOOL)isCompatibleWithCurrentStore
 {
-    NSURL *URL = [[self class] sqliteStoreURL];
+    NSURL *storeURL = [[self class] storeURL];
     NSError *error = nil;
-    NSDictionary *metaData = [NSPersistentStoreCoordinator metadataForPersistentStoreOfType:NSSQLiteStoreType URL:URL error:&error];
+    NSDictionary *metaData = [NSPersistentStoreCoordinator metadataForPersistentStoreOfType:NSSQLiteStoreType URL:storeURL error:&error];
     if (error) {
         if (error.code == 260) {
             return NO;
@@ -43,7 +43,8 @@
         }
     }
     
-    NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:@[[NSBundle mainBundle]]];
+    NSURL *modelURL = [[self class] modelURL];
+    NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return ![model isConfiguration:nil compatibleWithStoreMetadata:metaData];
 }
 
@@ -53,7 +54,7 @@
         NSURL *modelURL = [[self class] modelURL];
         NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
         
-        NSURL *storeURL = [[self class] sqliteStoreURL];
+        NSURL *storeURL = [[self class] storeURL];
         NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
         NSError *error = nil;
         if (![coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
@@ -70,10 +71,10 @@
 
 #pragma mark -
 
-- (void)dropDatabase
+- (void)deleteCurrentStore
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSURL *storeURL = [[self class] sqliteStoreURL];
+    NSURL *storeURL = [[self class] storeURL];
     
     if ([fileManager fileExistsAtPath:[storeURL path]]) {
         NSError *error = nil;
