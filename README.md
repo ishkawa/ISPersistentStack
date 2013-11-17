@@ -1,4 +1,4 @@
-# ISPersistentStack
+# ISPersistentStack [![Build Status](https://travis-ci.org/ishkawa/ISPersistentStack.png?branch=master)](https://travis-ci.org/ishkawa/ISPersistentStack) [![Coverage Status](https://coveralls.io/repos/ishkawa/ISPersistentStack/badge.png)](https://coveralls.io/r/ishkawa/ISPersistentStack)
 
 a reliable helper for CoreData.
 
