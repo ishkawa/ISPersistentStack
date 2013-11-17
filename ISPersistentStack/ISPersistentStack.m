@@ -2,9 +2,9 @@
 
 @implementation ISPersistentStack
 
-@synthesize managedObjectModel = _managedObjectModel;
+@synthesize managedObjectModel         = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectContext       = _managedObjectContext;
 
 + (instancetype)sharedStack
 {
@@ -90,7 +90,6 @@
             abort();
         }
     }
-    
     _managedObjectContext = nil;
 }
 
