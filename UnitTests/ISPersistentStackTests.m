@@ -39,8 +39,8 @@
                                                                               URL:persistentStack.storeURL
                                                                             error:[OCMArg setTo:nil]];
     
-    STAssertTrue(persistentStack.isCompatibleWithCurrentStore,
-                 @"stack should be incompatible with current store if meta data is invalid.");
+    STAssertFalse(persistentStack.isCompatibleWithCurrentStore,
+                  @"stack should be incompatible with current store if meta data is invalid.");
 }
 
 - (void)testDropDatabase

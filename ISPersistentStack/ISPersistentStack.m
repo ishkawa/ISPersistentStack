@@ -34,16 +34,16 @@
     NSError *error = nil;
     NSDictionary *metaData = [NSPersistentStoreCoordinator metadataForPersistentStoreOfType:NSSQLiteStoreType URL:self.storeURL error:&error];
     if (error) {
-        if (error.code == 260) {
-            return NO;
+        if (error.code == NSFileReadNoSuchFileError) {
+            return YES;
         } else {
             NSLog(@"could not obtain metadata of persistent store: %@(%@)", error, [error userInfo]);
-            return YES;
+            return NO;
         }
     }
     
     NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:self.modelURL];
-    return ![model isConfiguration:nil compatibleWithStoreMetadata:metaData];
+    return [model isConfiguration:nil compatibleWithStoreMetadata:metaData];
 }
 
 - (NSManagedObjectContext *)managedObjectContext
