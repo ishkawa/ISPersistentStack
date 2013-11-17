@@ -36,7 +36,7 @@
 {
     id mock = [OCMockObject mockForClass:[NSPersistentStoreCoordinator class]];
     [[[mock stub] andReturn:@{@"key": @"value"}] metadataForPersistentStoreOfType:NSSQLiteStoreType
-                                                                              URL:[ISPersistentStack storeURL]
+                                                                              URL:persistentStack.storeURL
                                                                             error:[OCMArg setTo:nil]];
     
     STAssertTrue(persistentStack.isCompatibleWithCurrentStore,
@@ -46,12 +46,11 @@
 - (void)testDropDatabase
 {
     NSManagedObjectContext *previousContext = persistentStack.managedObjectContext;
-    NSURL *storeURL = [ISPersistentStack storeURL];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     id mock = [OCMockObject partialMockForObject:fileManager];
-    [[[mock stub] andReturnValue:@YES] fileExistsAtPath:storeURL.path];
-    [[[mock expect] andReturnValue:@YES] removeItemAtURL:storeURL error:[OCMArg setTo:nil]];
+    [[[mock stub] andReturnValue:@YES] fileExistsAtPath:persistentStack.storeURL.path];
+    [[[mock expect] andReturnValue:@YES] removeItemAtURL:persistentStack.storeURL error:[OCMArg setTo:nil]];
     
     [persistentStack deleteCurrentStore];
     

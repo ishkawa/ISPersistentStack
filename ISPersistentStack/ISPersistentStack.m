@@ -15,25 +15,24 @@
     return stack;
 }
 
-+ (NSURL *)modelURL
+#pragma mark - accessors
+
+- (NSURL *)modelURL
 {
     return [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
 }
 
-+ (NSURL *)storeURL
+- (NSURL *)storeURL
 {
     NSArray *URLs = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
     NSURL *documentURL = [URLs lastObject];
     return [documentURL URLByAppendingPathComponent:@"Model.sqlite"];
 }
 
-#pragma mark - accessors
-
 - (BOOL)isCompatibleWithCurrentStore
 {
-    NSURL *storeURL = [[self class] storeURL];
     NSError *error = nil;
-    NSDictionary *metaData = [NSPersistentStoreCoordinator metadataForPersistentStoreOfType:NSSQLiteStoreType URL:storeURL error:&error];
+    NSDictionary *metaData = [NSPersistentStoreCoordinator metadataForPersistentStoreOfType:NSSQLiteStoreType URL:self.storeURL error:&error];
     if (error) {
         if (error.code == 260) {
             return NO;
@@ -43,21 +42,17 @@
         }
     }
     
-    NSURL *modelURL = [[self class] modelURL];
-    NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:self.modelURL];
     return ![model isConfiguration:nil compatibleWithStoreMetadata:metaData];
 }
 
 - (NSManagedObjectContext *)managedObjectContext
 {
     if (!_managedObjectContext) {
-        NSURL *modelURL = [[self class] modelURL];
-        NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-        
-        NSURL *storeURL = [[self class] storeURL];
+        NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:self.modelURL];
         NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
         NSError *error = nil;
-        if (![coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+        if (![coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.storeURL options:nil error:&error]) {
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
@@ -74,11 +69,9 @@
 - (void)deleteCurrentStore
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSURL *storeURL = [[self class] storeURL];
-    
-    if ([fileManager fileExistsAtPath:[storeURL path]]) {
+    if ([fileManager fileExistsAtPath:[self.storeURL path]]) {
         NSError *error = nil;
-        if (![fileManager removeItemAtURL:storeURL error:&error]) {
+        if (![fileManager removeItemAtURL:self.storeURL error:&error]) {
             NSLog(@"error: %@", error);
             abort();
         }

@@ -4,10 +4,10 @@
 
 @property (nonatomic, readonly, getter = isCompatibleWithCurrentStore) BOOL compatibleWithCurrentStore;
 @property (nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, readonly) NSURL *modelURL;
+@property (nonatomic, readonly) NSURL *storeURL;
 
 + (instancetype)sharedStack;
-+ (NSURL *)modelURL;
-+ (NSURL *)storeURL;
 
 - (void)deleteCurrentStore;
 - (void)saveContext;
