@@ -4,7 +4,7 @@ test:
 		-workspace ISPersistentStack.xcworkspace \
 		-scheme UnitTests \
 		-configuration Debug \
-		clean test \
+		clean build \
 		TEST_AFTER_BUILD=YES \
 		ONLY_ACTIVE_ARCH=NO \
 		GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES \
