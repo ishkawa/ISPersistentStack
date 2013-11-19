@@ -1,10 +1,10 @@
 test:
-	xctool \
+	xcodebuild \
 		-sdk iphonesimulator \
 		-workspace ISPersistentStack.xcworkspace \
 		-scheme UnitTests \
 		-configuration Debug \
-		clean build test \
+		clean test \
 		TEST_AFTER_BUILD=YES \
 		ONLY_ACTIVE_ARCH=NO \
 		GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES \
