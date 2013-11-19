@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FA9D0A31837B5A700815750"
+               BlueprintIdentifier = "7F24FAC9183BA31C0045FB41"
                BuildableName = "DemoApp.app"
                BlueprintName = "DemoApp"
                ReferencedContainer = "container:ISPersistentStack.xcodeproj">
@@ -32,19 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FA9D0BA1837B5A700815750"
+               BlueprintIdentifier = "7F24FAE0183BA31C0045FB41"
                BuildableName = "DemoAppTests.xctest"
                BlueprintName = "DemoAppTests"
-               ReferencedContainer = "container:ISPersistentStack.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FA9D0D21837B5D000815750"
-               BuildableName = "UnitTests.octest"
-               BlueprintName = "UnitTests"
                ReferencedContainer = "container:ISPersistentStack.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -52,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7FA9D0A31837B5A700815750"
+            BlueprintIdentifier = "7F24FAC9183BA31C0045FB41"
             BuildableName = "DemoApp.app"
             BlueprintName = "DemoApp"
             ReferencedContainer = "container:ISPersistentStack.xcodeproj">
@@ -71,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7FA9D0A31837B5A700815750"
+            BlueprintIdentifier = "7F24FAC9183BA31C0045FB41"
             BuildableName = "DemoApp.app"
             BlueprintName = "DemoApp"
             ReferencedContainer = "container:ISPersistentStack.xcodeproj">
@@ -89,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7FA9D0A31837B5A700815750"
+            BlueprintIdentifier = "7F24FAC9183BA31C0045FB41"
             BuildableName = "DemoApp.app"
             BlueprintName = "DemoApp"
             ReferencedContainer = "container:ISPersistentStack.xcodeproj">

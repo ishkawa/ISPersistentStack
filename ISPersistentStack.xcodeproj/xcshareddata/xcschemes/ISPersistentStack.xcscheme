@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FC178E21837AE0800764203"
+               BlueprintIdentifier = "7F24FA85183BA09E0045FB41"
                BuildableName = "libISPersistentStack.a"
                BlueprintName = "ISPersistentStack"
                ReferencedContainer = "container:ISPersistentStack.xcodeproj">
@@ -32,9 +32,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FC178F21837AE0800764203"
+               BlueprintIdentifier = "7F24FA95183BA09E0045FB41"
                BuildableName = "ISPersistentStackTests.xctest"
                BlueprintName = "ISPersistentStackTests"
+               ReferencedContainer = "container:ISPersistentStack.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7F1835DA183BA6B2005164EC"
+               BuildableName = "UnitTests.octest"
+               BlueprintName = "UnitTests"
                ReferencedContainer = "container:ISPersistentStack.xcodeproj">
             </BuildableReference>
          </TestableReference>
