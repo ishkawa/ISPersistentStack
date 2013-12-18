@@ -91,6 +91,8 @@
         }
     }
     _managedObjectContext = nil;
+    _persistentStoreCoordinator = nil;
+    _managedObjectModel = nil;
 }
 
 - (void)saveContext

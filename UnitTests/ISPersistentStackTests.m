@@ -46,6 +46,9 @@
 - (void)testDropDatabase
 {
     NSManagedObjectContext *previousContext = persistentStack.managedObjectContext;
+    NSPersistentStoreCoordinator *previousCoordinator = persistentStack.persistentStoreCoordinator;
+    NSManagedObjectModel *previousModel = persistentStack.managedObjectModel;
+
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     id mock = [OCMockObject partialMockForObject:fileManager];
@@ -56,6 +59,8 @@
     
     STAssertNoThrow([mock verify], @"item store URL was not removed.");
     STAssertTrue(persistentStack.managedObjectContext != previousContext, @"did not recreate context.");
+    STAssertTrue(persistentStack.persistentStoreCoordinator != previousCoordinator, @"did not recreate coordinator.");
+    STAssertTrue(persistentStack.managedObjectModel != previousModel, @"did not recreate model.");
 }
 
 - (void)testSaveContext
